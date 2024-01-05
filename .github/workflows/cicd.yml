@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nn-springboot-example
-          path: ${{ github.workspace }}/target/*.war
+          path: ${{ github.workspace }}/target/*.jar
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -36,4 +36,4 @@ jobs:
         with:
           app-name: naren-springboot123
           publish-profile: ${{ secrets.azureWebAppPublishProfile }}
-          package: "*.war"
+          package: "*.jar"
