@@ -34,6 +34,6 @@ jobs:
       - name: Deploy to Azure App services
         uses: azure/webapps-deploy@v2
         with:
-          app-name: naren-springboot
+          app-name: naren-springboot123
           publish-profile: ${{ secrets.azureWebAppPublishProfile }}
           package: "*.war"
