@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nn-springboot-example
-          path: ${{ github.workspace }}/*.war
+          path: ${{ github.workspace }}/target/*.war
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -30,7 +30,7 @@ jobs:
       - name: Download Artifact from build Job
         uses: actions/download-artifact@v2
         with:
-          name: 
+          name: naren-springboot123
       - name: Deploy to Azure App services
         uses: azure/webapps-deploy@v2
         with:
