@@ -3,7 +3,7 @@ name: Deploy Springboot App to Azure App Services
 on:
   push:
     branches:
-      - deploy-to-azure-app-services
+      - main
 
 jobs:
   build:
